@@ -45,6 +45,22 @@ app_license = "MIT"
 #	"Role": "home_page"
 # }
 
+website_route_rules = [
+	{"from_route": "/blog", "to_route": "mzindex"},
+	{"from_route": "/eblog/<category>", "to_route": "category",
+		"defaults": {
+			"doctype": "Blog Category",
+			"parents": [{"label": "eblog", "route": "category"}]
+		}
+	},
+	{"from_route": "/eblog/<category>/<name>", "to_route": "mzpost",
+		"defaults": {
+			"doctype": "Blog Post",
+			"parents": [{"label": "eblog", "route": "mzpost"}]
+		}
+	},
+]
+
 # Generators
 # ----------
 

@@ -1,0 +1,186 @@
+
+{% include "templates/includes/head_magazine.html" %}
+
+            <div class="post-single-area mt-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 single-blog-content">
+                            <div class="post-single-wrapper">
+                                <div class="post-cat-box">
+                                    <a href="/eblog/{{post.blog_category}}">{{post.blog_category}}</a>
+                                </div>
+                                <h1 class="post-title">
+                                    {{post.title}}
+                                </h1>
+                                <div class="blog-small-excerpt-box">
+                                    <p>{{post.blog_intro}}</p>
+                                </div>
+                                <div class="post-bottom-meta-list post-meta-wrapper">
+                                    <div class="post-left-details-meta">
+                                        <div class="post-meta-author-box">
+                                            Por <a href="#">{{post.blogger}}</a>
+                                        </div>
+                                        <div class="post-meta-date-box">
+                                            {{post.published_on}}
+                                        </div>
+                                    </div>
+                                    <div class="post-meta-social">
+                                        <a href="#"><i class="icofont-link"></i></a>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <div class="post-featured-image">
+                                    <img src="{{post.meta_image}}" alt="Post Image">
+                                </div>
+                            </div>
+                            <div class="theme-blog-details">
+                                {{post.content}}
+                                <div class="author-bio-wrap">
+                                    <div class="author-thumbnail">
+                                        <a href="#"><img src="{{blogger.avatar}}" alt="Author"></a>
+                                    </div>
+                                    <div class="author-body">
+                                        <span class="subtitle">{{blogger.puesto}}</span>
+                                        <h5 class="title">
+                                            {{post.blogger}}
+                                        </h5>
+                                        <p class="author-inner-text">{{blogger.bio}}</p>
+                                       
+                                    </div>
+                                </div>
+                                <div class="theme-comment-area">
+                                    <!--
+                                    <div class="comment-respond">
+                                        <h4 class="title">Post a comment</h4>
+                                        <form action="#">
+                                            <p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
+                                            <div class="row">
+                                                <div class="col-lg-4 col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="name">Your Name</label>
+                                                        <input id="name" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="email">Your Email</label>
+                                                        <input id="email" type="email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="website">Your Website</label>
+                                                        <input id="website" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <label for="message">Leave a Reply</label>
+                                                        <textarea id="message" name="message"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <p class="comment-form-cookies-consent">
+                                                        <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
+                                                        <label for="wp-comment-cookies-consent">Save my name, email, and
+                                                        website in this browser for the next time I comment.</label>
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="form-submit">
+                                                        <input name="submit" type="submit" id="submit" class="theme-submit-btn" value="Post Comment">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                   -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="sidebar blog-sidebar">
+                                <div class="section-title">
+                                    <h2 class="title-block">
+                                        Empresas que ofrecen el servicio
+                                    </h2>
+                                </div>
+                                {% for restaurante in restaurantes %}
+                                <article class="post-block-style-wrapper post-block-template-two">
+                                    <div class="post-block-style-inner post-block-list-style-inner">
+                                        <div class="post-block-media-wrap">
+                                            <a href="post-single.html">
+                                            <img src="{{restaurante.foto}}" alt="Post title">
+                                            </a>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-category-box">
+                                                <a class="post-cat-item" href="blog-category.html">{{restaurante.categoria}}</a>
+                                            </div>
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="post-single.html">{{restaurante.nombre}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    <a href="javascript:void(0)">{{restaurante.provincia}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {%endfor%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="popular-posts-column-area related-posts-wrapper mt-60 mb-50">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <h2 class="title-block">
+                                También te puede interesar
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for n in range(3) %}
+                        <div class="col-lg-4">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-medium mb-24">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="{{featured[n].route}}">
+                                        <img src="{{featured[n].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="{{featured[n].route}}">{{featured[n].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>{{featured[n].blog_intro}}</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="#">{{featured[n].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[n].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+{% include "templates/includes/footer_magazine.html" %}

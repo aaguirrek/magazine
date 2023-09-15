@@ -1,0 +1,74 @@
+
+
+
+{% include "templates/includes/head_magazine.html" %}
+
+
+            <div class="theme-breadcrumb-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-inner">
+                                <ul>
+                                    <li>Resultados de: <a href="#">{{pregunta}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-blog-page-area mb-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    {%for post in posts %}
+                                    <article class="post-block-style-wrapper post-block-template-four">
+                                        <div class="post-block-style-inner post-block-list-style-inner">
+                                            <div class="post-block-content-wrap">
+                                                <div class="post-item-title">
+                                                    <h2 class="post-title">
+                                                        <a href="/e{{post.route}}">{{post.title}}</a>
+                                                    </h2>
+                                                </div>
+                                                <div class="post-excerpt-box">
+                                                    <p>{{post.blog_intro}}</p>
+                                                </div>
+                                                <div class="post-bottom-meta-list">
+                                                    <div class="post-meta-author-box">
+                                                        Por <a href="javascript:void(0)">{{post.blogger}}</a>
+                                                    </div>
+                                                    <div class="post-meta-date-box">
+                                                        {{post.published_on}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="post-block-media-wrap">
+                                                <a href="/e{{post.route}}">
+                                                <img src="{{post.meta_image}}" alt="Post title">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                           <!-- <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="blog-pagination-area mt-40">
+                                        <ul class="page-numbers">
+                                            <li><span aria-current="page" class="page-numbers current">1</span></li>
+                                            <li><a class="page-numbers" href="javascript:void(0)">2</a></li>
+                                            <li><a class="next page-numbers" href="javascript:void(0)"><i class="icofont-long-arrow-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+{% include "templates/includes/footer_magazine.html" %}

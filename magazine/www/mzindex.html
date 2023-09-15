@@ -1,0 +1,904 @@
+
+{% include "templates/includes/head_magazine.html" %}
+
+            <section class="blog-hero-area mt-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="/e{{featured[0].route}}">
+                                        <img src="{{featured[0].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/e{{featured[0].route}}">{{featured[0].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="javascript:void(0)">{{featured[0].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[0].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% if featured|length > 1 %}
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="/e{{featured[1].route}}">
+                                        <img src="{{featured[1].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/e{{featured[1].route}}">{{featured[1].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="javascript:void(0)">{{featured[1].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[1].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                            {% if featured|length > 2 %}
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="/e{{featured[2].route}}">
+                                        <img src="{{featured[2].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/e{{featured[2].route}}">{{featured[2].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="javascript:void(0)">{{featured[2].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[2].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                            {% if featured|length > 3 %}
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="/e{{featured[3].route}}">
+                                        <img src="{{featured[3].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/e{{featured[3].route}}">{{featured[3].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="javascript:void(0)">{{featured[3].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[3].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-6">
+                            
+                            {% if featured|length > 4 %}
+                            
+                            <article class="post-block-style-wrapper post-block-template-one sm-mt-24">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="/e{{featured[4].route}}">
+                                        <img src="{{featured[4].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/e{{featured[4].route}}">{{featured[4].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>{{featured[4].blog_intro}}</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">{{featured[4].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[4].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                            {% if featured|length > 5 %}
+                            
+                            <article class="post-block-style-wrapper post-block-template-one sm-mt-24">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="/e{{featured[5].route}}">
+                                        <img src="{{featured[5].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/e{{featured[5].route}}">{{featured[5].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>{{featured[5].blog_intro}}</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">{{featured[5].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{featured[5].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endif %}
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="section-title sm-mt-24">
+                                <h2 class="title-block">
+                                    Restaurantes
+                                </h2>
+                            </div>
+                            <div class="post-block-template-two-wrapper">
+                                {% for restaurante in restaurantes %}
+                                <article class="post-block-style-wrapper post-block-template-two">
+                                    <div class="post-block-style-inner post-block-list-style-inner">
+                                        <div class="post-block-media-wrap">
+                                            <a href="post-single.html">
+                                            <img src="{{restaurante.foto}}" alt="Post title">
+                                            </a>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-category-box">
+                                                <a class="post-cat-item" href="blog-category.html">{{restaurante.categoria}}</a>
+                                            </div>
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="post-single.html">{{restaurante.nombre}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    <a href="javascript:void(0)">{{restaurante.provincia}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {%endfor%}
+                            </div>
+                            <div class="ads-widget mt-40">
+                                <a href="post-single.html">
+                                <img src="/OIP.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section-divider mt-60 mb-60"></div>
+            <section class="editor-choice-one-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="section-title">
+                                <h2 class="title-block">
+                                    CAÑON DEL COLCA
+                                </h2>
+                            </div>
+                            <div class="post-block-template-three-wrapper">
+                                <article class="post-block-style-wrapper post-block-template-three">
+                                    <div class="post-block-style-inner post-block-list-style-inner-three">
+                                        <div class="post-block-number-wrap">
+                                            <span class="post-number-counter">1</span>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="e{{colca[4].route}}">
+                                                        {{colca[4].title}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    Por <a href="javascript:void(0)"> {{colca[4].blogger}}</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    {{colca[4].published_on}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-block-style-wrapper post-block-template-three">
+                                    <div class="post-block-style-inner post-block-list-style-inner-three">
+                                        <div class="post-block-number-wrap">
+                                            <span class="post-number-counter">2</span>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="e{{colca[3].route}}"> {{colca[3].title}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    Por <a href="javascript:void(0)"> {{colca[3].blogger}}</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    {{colca[3].published_on}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post-block-style-wrapper post-block-template-three">
+                                    <div class="post-block-style-inner post-block-list-style-inner-three">
+                                        <div class="post-block-number-wrap">
+                                            <span class="post-number-counter">3</span>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="e{{colca[2].route}}">{{colca[2].title}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    Por <a href="javascript:void(0)">{{colca[2].blogger}}</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    {{colca[2].published_on}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 most-recent-col-custom">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="section-title">
+                                        <h2 class="title-block">
+                                            MAS RELEVANTES
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <article class="post-block-style-wrapper post-block-template-one post-block-template-medium">
+                                        <div class="post-block-style-inner">
+                                            <div class="post-block-media-wrap">
+                                                <a href="e{{colca[0].route}}">
+                                                <img src="{{colca[0].meta_image}}" alt="Post title">
+                                                </a>
+                                            </div>
+                                            <div class="post-block-content-wrap">
+                                                <div class="post-item-title">
+                                                    <h2 class="post-title">
+                                                        <a href="e{{colca[0].route}}">{{colca[0].title}}</a>
+                                                    </h2>
+                                                </div>
+                                                <div class="post-excerpt-box">
+                                                    <p>{{colca[0].blog_intro}}</p>
+                                                </div>
+                                                <div class="post-bottom-meta-list">
+                                                    <div class="post-meta-author-box">
+                                                        Por <a href="javascript:void(0)">{{colca[0].blogger}}</a>
+                                                    </div>
+                                                    <div class="post-meta-date-box">
+                                                        {{colca[0].published_on}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="col-lg-6">
+                                    <article class="post-block-style-wrapper post-block-template-one post-block-template-medium">
+                                        <div class="post-block-style-inner">
+                                            <div class="post-block-media-wrap">
+                                                <a href="e{{colca[1].route}}">
+                                                <img src="{{colca[1].meta_image}}" alt="Post title">
+                                                </a>
+                                            </div>
+                                            <div class="post-block-content-wrap">
+                                                <div class="post-item-title">
+                                                    <h2 class="post-title">
+                                                        <a href="e{{colca[1].route}}">{{colca[1].title}}</a>
+                                                    </h2>
+                                                </div>
+                                                <div class="post-excerpt-box">
+                                                    <p>{{colca[1].blog_intro}}</p>
+                                                </div>
+                                                <div class="post-bottom-meta-list">
+                                                    <div class="post-meta-author-box">
+                                                        Por <a href="javascript:void(0)">{{colca[1].blogger}}</a>
+                                                    </div>
+                                                    <div class="post-meta-date-box">
+                                                        {{colca[1].published_on}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ads-area mt-70 mb-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="ads-caption d-none">Advertisement</h3>
+                            <div class="ads-image">
+                                <a href="post-single.html">
+                                <img src="/ad.jpg" >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="editor-choice-two-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2 class="title-block">
+                                    Eleccion del editor
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            {% for n in range(3) %}
+                            <article class="post-block-style-wrapper post-block-template-four">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="{{eleccion_del_editor[n].route}}">{{eleccion_del_editor[n].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>{{eleccion_del_editor[n].blog_intro}}</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="javascript:void(0)">{{eleccion_del_editor[n].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{eleccion_del_editor[n].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-block-media-wrap">
+                                        <a href="{{eleccion_del_editor[n].route}}">
+                                        <img src="{{eleccion_del_editor[n].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endfor %}
+                        </div>
+                        <div class="col-lg-4">
+                            {% for d in range(5) %}
+                            <article class="post-block-style-wrapper post-block-template-two most-read-block-list">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="{{eleccion_del_editor[d+3].route}}">
+                                        <img src="{{eleccion_del_editor[d+3].meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="{{eleccion_del_editor[d+3].route}}">{{eleccion_del_editor[d+3].title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                <a href="javascript:void(0)">{{eleccion_del_editor[d+3].blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{eleccion_del_editor[d+3].published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section-divider mt-60 mb-60"></div>
+        <!--    <section class="articles-grid-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2 class="title-block">
+                                    Articles
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/camera.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">Michelle Tea's Punk Parenting Memoir</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">Muntahin</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 22
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/camera.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">A beginner’s guide to customer journey maps</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">Muntahin</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 22
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-small">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/camera.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">Establishing That You Have Something To Say</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">Muntahin</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 22
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="newsletter-box-wrapper">
+                                <h3>Sign up for our newsletters!</h3>
+                                <form action="newsletter.php" method="post">
+                                    <input type="email" name="email" id="femail">
+                                    <input type="submit" value="Subscribe" id="fsubmit">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="most-popular-area mt-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2 class="title-block">
+                                    Most Popular
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-50">
+                        <div class="col-lg-5">
+                            <article class="post-block-style-wrapper post-block-template-one custom-spacing">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/headphone-girl.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">Every day, in every city and town across the country</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>The majog oil-producing  state has long tried to have it both ways regulating emissions</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">Laura Tanenbaum</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 22
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-7">
+                            <article class="post-block-style-wrapper post-block-template-four">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">I work best when my space is filled with inspiration</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>Australians have just learned their election will be held on 21 May. At a crucial time</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">Cristiano</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 22
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/office.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="post-block-style-wrapper post-block-template-four">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">It’s a new era in design, there are no rules</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>Anelle, don’t look down. revere  the sun. watch it make a shallow arc</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="javascript:void(0)">Cristiano</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 22
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/paint.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row divider-border">
+                        <div class="col-lg-4">
+                            <div class="post-block-template-three-wrapper popular-post-block-bottom-wrapper">
+                                <article class="post-block-style-wrapper post-block-template-three">
+                                    <div class="post-block-style-inner post-block-list-style-inner-three">
+                                        <div class="post-block-number-wrap">
+                                            <span class="post-number-counter">1</span>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="post-single.html">Urban green revivo oversized blazer</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    By <a href="javascript:void(0)">Laura Tanenbaum</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    Sep 22
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="post-block-template-three-wrapper popular-post-block-bottom-wrapper">
+                                <article class="post-block-style-wrapper post-block-template-three">
+                                    <div class="post-block-style-inner post-block-list-style-inner-three">
+                                        <div class="post-block-number-wrap">
+                                            <span class="post-number-counter">2</span>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="post-single.html">Varsity brown bomber jacket in tan</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    By <a href="javascript:void(0)">Laura Tanenbaum</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    Sep 22
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="post-block-template-three-wrapper popular-post-block-bottom-wrapper">
+                                <article class="post-block-style-wrapper post-block-template-three">
+                                    <div class="post-block-style-inner post-block-list-style-inner-three">
+                                        <div class="post-block-number-wrap">
+                                            <span class="post-number-counter">3</span>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="post-single.html">Blossom is an incredibly easy method</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    By <a href="javascript:void(0)">Laura Tanenbaum</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    Sep 22
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video-posts-area pt-80 pb-80 mt-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="section-title">
+                                <h2 class="title-block">
+                                    Featured Videos
+                                </h2>
+                            </div>
+                            <article class="post-block-style-wrapper post-block-template-one post-block-video">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-video-thumb">
+                                        <div class="post-block-media-wrap">
+                                            <a href="post-single.html">
+                                            <img src="/assets/magazine/media/singer.jpg" alt="Post title">
+                                            </a>
+                                        </div>
+                                        <div class="video-play-icon-wrap">
+                                            <a href="post-single.html" class="theme-play-btn video-play-btn"></a>
+                                        </div>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">8 Reasons to become a Design Preneur</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>Design your way to success by Mike Rosales hellow and welcome to my blog on anaything about Design and Entrepreneurship</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="section-btn text-end">
+                                <a href="post-single.html"><span>+</span>See All Videos</a>
+                            </div>
+                            <article class="post-block-style-wrapper post-block-template-two post-video-list">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/model.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">Maddie Ziegler Takes a Lie Detector Test</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                <a href="javascript:void(0)">Cristiano</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 30
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="post-block-style-wrapper post-block-template-two post-video-list">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/beach.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">The dark fate that awaits every player</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                <a href="javascript:void(0)">Cristiano</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 30
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="post-block-style-wrapper post-block-template-two post-video-list">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="post-single.html">
+                                        <img src="/assets/magazine/media/sky-open.jpg" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="post-single.html">Perfection has to do with the end product</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                <a href="javascript:void(0)">Cristiano</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                Sep 30
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <section class="popular-posts-column-area mt-60 mb-35">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <h2 class="title-block">
+                                Mas Antiguos
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {% for post in posts %}
+                        <div class="col-lg-4">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-medium mb-40">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="{{post.route}}">
+                                        <img src="{{post.meta_image}}" alt="Post title">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="{{post.route}}">{{post.title}}</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>{{post.blog_intro}}</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                Por <a href="javascript:void(0)">{{post.blogger}}</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                                {{post.published_on}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+           
+
+{% include "templates/includes/footer_magazine.html" %}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Magazine</title>
+        <meta name="robots" content="noindex, follow" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="/assets/magazine/media/favicon.png">
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="/assets/magazine/css/vendor/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/magazine/css/vendor/font-awesome.css">
+        <link rel="stylesheet" href="/assets/magazine/css/vendor/icon-font.css">
+        <link rel="stylesheet" href="/assets/magazine/css/vendor/remixicon.css">
+        <!-- Site Stylesheet -->
+        <link rel="stylesheet" href="/assets/magazine/css/app.css">
+        <link rel="stylesheet" href="/assets/magazine/css/responsive.css">
+
+        
+<script>
+	window.frappe = {};
+	frappe.ready_events = [];
+	frappe.ready = function(fn) {
+		frappe.ready_events.push(fn);
+	}
+	window.dev_server = {{ dev_server }};
+	window.socketio_port = {{ (frappe.socketio_port or 'null') }};
+	window.show_language_picker = {{ show_language_picker or 'false' }};
+</script>
+
+
+    </head>
+    <body>
+        <!-- Site Preloader -->
+        <div id="preloader">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+        <!-- Site Wrapper -->
+        <div id="main-wrapper" class="main-wrapper">
+            <!-- Start Header -->
+            <header id="theme-header-one" class="theme-header-main header-style-one">
+                <div class="theme-header-area">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-2">
+                                <div class="logo theme-logo">
+                                    <a href="/mzindex"><img src="/assets/magazine/media/logo.svg" alt="Logo"></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="nav-menu-wrapper">
+                                    <div class="mainmenu">
+                                        <nav class="nav-main-wrap">
+                                            <ul class="theme-navigation-wrap theme-main-menu">
+                                                <li><a href="/mzindex">Home</a></li>
+                                                <li class="has-children">
+                                                    <a href="javascript:void(0)">Categorías</a>
+                                                    <ul class="dropdown sub-menu">
+                                                        {%for cat in category %}
+                                                        <li><a href="/eblog/{{cat.name}}">{{cat.title}}</a></li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </li>
+                                                <li><a href="/mzabout">Nosotros</a></li>
+                                                <li><a href="/mzcontact">Contacto</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="header-right-wrapper">
+                                    <div class="header_search_wrap">
+                                        <div class="search-icon theme-search-custom-iconn">
+                                            <i class="icofont-search-1"></i>
+                                        </div>
+                                        <div id="theme-serach-box_Inner">
+                                            <div class="theme-serach-box_inner_wrapper d-flex align-items-center">
+                                                <form role="search" method="get" id="searchform" class="search-form" action="/search">
+                                                    <div class="form-group">
+                                                        <input type="text" class="search-input" id="popup-search" value="" name="query" placeholder="Type keywords here....." />
+                                                    </div>
+                                                    <button type="submit" id="serach-popup-btn-box" class="search-button submit-btn"><i class="icofont-search-1"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="header-subscribe">
+                                        <a href="javascript:void(0)" class="subscribe-btn">Subscribe</a>
+                                    </div> -->
+                                    <div class="header-burger-menu">
+                                        <div class="burger-nav-bar">
+                                            <a class="tp-header__bars tp-menu-bar" href="javascript:void(0)">
+                                            <i class="ri-menu-fill"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- tp-offcanvus-area-start -->
+            <div class="tp-offcanvas-area">
+                <div class="tpoffcanvas">
+                    <div class="tpoffcanvas__close-btn">
+                        <button class="close-btn"><i class="icofont-close"></i></button>
+                    </div>
+                    <div class="tpoffcanvas__logo offcanvas-logo">
+                        <a href="index.html">
+                        <img src="/assets/magazine/media/logo.svg" alt="Logo">
+                        </a>
+                    </div>
+                    
+                    <div class="tpoffcanvas__text offcanvas-content">
+                        <div class="main-canvas-inner">
+                            <div class="canvas-bar-post-list">
+                                {% for n in range(4) %}
+                                <article class="post-block-style-wrapper post-block-template-two most-read-block-list">
+                                    <div class="post-block-style-inner post-block-list-style-inner">
+                                        <div class="post-block-media-wrap">
+                                            <a href="{{featured[n].route}}">
+                                            <img src="{{featured[n].meta_image}}" alt="Post title">
+                                            </a>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="{{featured[n].route}}">{{featured[n].title}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-author-box">
+                                                    <a href="javascript:void(0)">{{featured[n].blogger}}</a>
+                                                </div>
+                                                <div class="post-meta-date-box">
+                                                    {{featured[n].published_on}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {% endfor %}
+                            </div>
+                            <div class="panel-nav-social">
+                                <a href="#"><i class="icofont-facebook"></i></a>
+                                <a href="#"><i class="icofont-twitter"></i></a>
+                                <a href="#"><i class="icofont-instagram"></i></a>
+                                <a href="#"><i class="icofont-linkedin"></i></a>
+                                <a href="#"><i class="icofont-youtube"></i></a>
+                            </div>
+                        </div>
+                        <div class="mobile-canvas-content">
+                            <div class="canvas-nav-menu-wrapper">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="body-overlay"></div>
+            <!-- tp-offcanvus-area-end -->
