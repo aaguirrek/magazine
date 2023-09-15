@@ -182,17 +182,17 @@
                                 <article class="post-block-style-wrapper post-block-template-two">
                                     <div class="post-block-style-inner post-block-list-style-inner">
                                         <div class="post-block-media-wrap">
-                                            <a href="post-single.html">
+                                            <a href="{{restaurante.url}}">
                                             <img src="{{restaurante.foto}}" alt="Post title">
                                             </a>
                                         </div>
                                         <div class="post-block-content-wrap">
                                             <div class="post-category-box">
-                                                <a class="post-cat-item" href="blog-category.html">{{restaurante.categoria}}</a>
+                                                <a class="post-cat-item" href="{{restaurante.url}}">{{restaurante.categoria}}</a>
                                             </div>
                                             <div class="post-item-title">
                                                 <h2 class="post-title">
-                                                    <a href="post-single.html">{{restaurante.nombre}}</a>
+                                                    <a href="{{restaurante.url}}">{{restaurante.nombre}}</a>
                                                 </h2>
                                             </div>
                                             <div class="post-bottom-meta-list">
@@ -403,7 +403,7 @@
                                     <div class="post-block-content-wrap">
                                         <div class="post-item-title">
                                             <h2 class="post-title">
-                                                <a href="{{eleccion_del_editor[n].route}}">{{eleccion_del_editor[n].title}}</a>
+                                                <a href="/e{{eleccion_del_editor[n].route}}">{{eleccion_del_editor[n].title}}</a>
                                             </h2>
                                         </div>
                                         <div class="post-excerpt-box">
@@ -419,7 +419,7 @@
                                         </div>
                                     </div>
                                     <div class="post-block-media-wrap">
-                                        <a href="{{eleccion_del_editor[n].route}}">
+                                        <a href="/e{{eleccion_del_editor[n].route}}">
                                         <img src="{{eleccion_del_editor[n].meta_image}}" alt="Post title">
                                         </a>
                                     </div>
@@ -432,14 +432,14 @@
                             <article class="post-block-style-wrapper post-block-template-two most-read-block-list">
                                 <div class="post-block-style-inner post-block-list-style-inner">
                                     <div class="post-block-media-wrap">
-                                        <a href="{{eleccion_del_editor[d+3].route}}">
+                                        <a href="/e{{eleccion_del_editor[d+3].route}}">
                                         <img src="{{eleccion_del_editor[d+3].meta_image}}" alt="Post title">
                                         </a>
                                     </div>
                                     <div class="post-block-content-wrap">
                                         <div class="post-item-title">
                                             <h2 class="post-title">
-                                                <a href="{{eleccion_del_editor[d+3].route}}">{{eleccion_del_editor[d+3].title}}</a>
+                                                <a href="/e{{eleccion_del_editor[d+3].route}}">{{eleccion_del_editor[d+3].title}}</a>
                                             </h2>
                                         </div>
                                         <div class="post-bottom-meta-list">
@@ -870,14 +870,14 @@
                             <article class="post-block-style-wrapper post-block-template-one post-block-template-medium mb-40">
                                 <div class="post-block-style-inner">
                                     <div class="post-block-media-wrap">
-                                        <a href="{{post.route}}">
+                                        <a href="/e{{post.route}}">
                                         <img src="{{post.meta_image}}" alt="Post title">
                                         </a>
                                     </div>
                                     <div class="post-block-content-wrap">
                                         <div class="post-item-title">
                                             <h2 class="post-title">
-                                                <a href="{{post.route}}">{{post.title}}</a>
+                                                <a href="/e{{post.route}}">{{post.title}}</a>
                                             </h2>
                                         </div>
                                         <div class="post-excerpt-box">

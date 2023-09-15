@@ -67,8 +67,8 @@
                                                         {% endfor %}
                                                     </ul>
                                                 </li>
-                                                <li><a href="/mzabout">Nosotros</a></li>
-                                                <li><a href="/mzcontact">Contacto</a></li>
+                                                <li><a href="/magabout">Nosotros</a></li>
+                                                <li><a href="/magcontact">Contacto</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -79,16 +79,6 @@
                                     <div class="header_search_wrap">
                                         <div class="search-icon theme-search-custom-iconn">
                                             <i class="icofont-search-1"></i>
-                                        </div>
-                                        <div id="theme-serach-box_Inner">
-                                            <div class="theme-serach-box_inner_wrapper d-flex align-items-center">
-                                                <form role="search" method="get" id="searchform" class="search-form" action="/search">
-                                                    <div class="form-group">
-                                                        <input type="text" class="search-input" id="popup-search" value="" name="query" placeholder="Type keywords here....." />
-                                                    </div>
-                                                    <button type="submit" id="serach-popup-btn-box" class="search-button submit-btn"><i class="icofont-search-1"></i></button>
-                                                </form>
-                                            </div>
                                         </div>
                                     </div>
                                     <!--<div class="header-subscribe">
@@ -107,6 +97,16 @@
                     </div>
                 </div>
             </header>
+            <div id="theme-serach-box_Inner">
+                <div class="theme-serach-box_inner_wrapper d-flex align-items-center">
+                    <form role="search" method="get" id="searchform" class="search-form" action="/search">
+                        <div class="form-group">
+                            <input type="text" class="search-input" id="popup-search" value="" name="query" placeholder="Type keywords here....." />
+                        </div>
+                        <button type="submit" id="serach-popup-btn-box" class="search-button submit-btn"><i class="icofont-search-1"></i></button>
+                    </form>
+                </div>
+            </div>
 
 
             <!-- tp-offcanvus-area-start -->
@@ -128,14 +128,14 @@
                                 <article class="post-block-style-wrapper post-block-template-two most-read-block-list">
                                     <div class="post-block-style-inner post-block-list-style-inner">
                                         <div class="post-block-media-wrap">
-                                            <a href="{{featured[n].route}}">
+                                            <a href="/e{{featured[n].route}}">
                                             <img src="{{featured[n].meta_image}}" alt="Post title">
                                             </a>
                                         </div>
                                         <div class="post-block-content-wrap">
                                             <div class="post-item-title">
                                                 <h2 class="post-title">
-                                                    <a href="{{featured[n].route}}">{{featured[n].title}}</a>
+                                                    <a href="/e{{featured[n].route}}">{{featured[n].title}}</a>
                                                 </h2>
                                             </div>
                                             <div class="post-bottom-meta-list">

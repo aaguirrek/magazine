@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import frappe
 from frappe import _
 sitemap = 1
-no_cache = 1
+#no_cache = 1
 
 def get_context(context):
 	name = frappe.form_dict.name
