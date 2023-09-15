@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include magazine *.css
+recursive-include magazine *.csv
+recursive-include magazine *.html
+recursive-include magazine *.ico
+recursive-include magazine *.js
+recursive-include magazine *.json
+recursive-include magazine *.md
+recursive-include magazine *.png
+recursive-include magazine *.py
+recursive-include magazine *.svg
+recursive-include magazine *.txt
+recursive-exclude magazine *.pyc

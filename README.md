@@ -1,0 +1,7 @@
+## Magazine
+
+Magazine
+
+#### License
+
+MIT
